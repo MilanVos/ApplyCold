@@ -11,15 +11,10 @@ public class KillCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
-        if(!(commandSender instanceof Player)){
-            commandSender.sendMessage("§cOnly players can use this command!");
-            return true;
-        }
-
         Player player = (Player) commandSender;
 
         KillConfirmationGui killConfirmationGui = new KillConfirmationGui(player);
-        killConfirmationGui.open();
+        killConfirmationGui.openGui();
 
         return true;
 

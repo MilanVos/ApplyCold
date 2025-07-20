@@ -1,7 +1,7 @@
 name: ApplyCold
 version: '1.0'
 main: nl.multitime.applyCold.ApplyCold
-api-version: '1.21'
+api-version: '1.19'
 authors: [ MysticPhoenix_ ]
 description: A plugin for ColdSMP with kill confirmation GUI
 

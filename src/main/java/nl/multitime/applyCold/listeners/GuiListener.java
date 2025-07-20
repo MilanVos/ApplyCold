@@ -18,7 +18,9 @@ public class GuiListener implements Listener {
 
         Player player = (Player) event.getWhoClicked();
 
-        if (!event.getView().getTitle().equals("§c§lConfirm Kill")) return;
+        String title = event.getView().getTitle();
+
+        if (!title.equals("§c§lConfirm Kill")) return;
 
         event.setCancelled(true);
 
@@ -39,10 +41,11 @@ public class GuiListener implements Listener {
                 handleCancelClick(player);
                 break;
 
-            case PLAYER_HEAD: // Skull click
+            case PLAYER_HEAD:
                 break;
 
             default:
+                // Glass pane or other items, do nothing
                 break;
         }
     }
@@ -50,9 +53,8 @@ public class GuiListener implements Listener {
     private void handleConfirmClick(Player player) {
         player.closeInventory();
 
-        Bukkit.getScheduler().runTask(ApplyCold.getInstance(), () -> {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "kill " + player.getName());
-        });
+        player.setHealth(0);
+        player.damage(2);
 
         player.sendMessage("§c§lYou have been killed!");
     }
