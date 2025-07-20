@@ -3,3 +3,16 @@ version: '1.0'
 main: nl.multitime.applyCold.ApplyCold
 api-version: '1.21'
 authors: [ MysticPhoenix_ ]
+description: A plugin for ColdSMP with kill confirmation GUI
+
+commands:
+  kill:
+    description: Opens a GUI to confirm killing yourself
+    usage: /kill
+    permission: coldsmp.kill
+    permission-message: You don't have permission to use this command!
+
+permissions:
+  coldsmp.kill:
+    description: Allows player to use the kill command
+    default: true
