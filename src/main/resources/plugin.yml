@@ -1,0 +1,5 @@
+name: ApplyCold
+version: '1.0'
+main: nl.multitime.applyCold.ApplyCold
+api-version: '1.21'
+authors: [ MysticPhoenix_ ]

@@ -1,0 +1,17 @@
+package nl.multitime.applyCold;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public final class ApplyCold extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        
+
+    }
+
+    @Override
+    public void onDisable() {
+        // Plugin shutdown logic
+    }
+}
